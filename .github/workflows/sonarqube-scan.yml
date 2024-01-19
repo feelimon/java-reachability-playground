@@ -1,7 +1,11 @@
 name: Run Sonar_Qube with Maven
-
-on: push
-
+on:
+  push:
+    branches:
+      - "main"
+      - "develop"
+  pull_request:
+    types: [opened, synchronize, reopened]
 jobs:
   build:
     runs-on: ubuntu-latest
